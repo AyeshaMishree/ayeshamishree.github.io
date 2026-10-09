@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects – Ayesha</title>
+  <meta name="description" content="14 university projects by Ayesha, spanning AI, mobile, web, databases, networking, and embedded systems, including the EmoCare Final Year Project.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a class="navbar__brand" href="index.html">Ayesha<span>.</span></a>
+      <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar__menu" id="navMenu" aria-label="Primary">
+        <a class="navbar__link" href="index.html">Home</a>
+        <a class="navbar__link" href="projects.html">Projects</a>
+        <a class="navbar__link" href="fyp.html">FYP</a>
+        <a class="navbar__link" href="mental-health.html">Mental Health Tech</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page__inner">
+
+      <section class="hero" style="grid-template-columns: 1fr; border-bottom: none; padding-bottom: 0; margin-bottom: var(--sp-7);">
+        <div>
+          <div class="hero__eyebrow">14 projects, in order of significance</div>
+          <h1>Projects</h1>
+          <p class="text-soft">
+            University work spanning AI and mobile development, web and database systems, networking,
+            and embedded systems, built across four years of coursework.
+          </p>
+        </div>
+      </section>
+
+      <div class="projects-list">
+
+        <!-- 01 - FYP EmoCare -->
+        <article class="project-card" id="project-1">
+          <div>
+            <div class="project-card__num">01 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/emocare_report.jpg" alt="EmoCare mental health app screens">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Final Year Project (FYP)</div>
+            <h3>EmoCare, Smart Mental Health App with AI &amp; Therapist Support</h3>
+            <p class="text-small text-soft">
+              An AI driven mental health platform combining CBT-style support, verified therapist
+              connectivity, secure in-app payment, and mood analytics. Built on a three-tier architecture,
+              an Android client, an ASP.NET Core backend, and a Python FastAPI AI microservice, with a
+              two-stage pipeline: a fine-tuned BERT classifier for emotional-state detection, followed by an
+              LLM call for CBT-aligned responses, with a hard crisis-safety branch built in.
+            </p>
+            <div>
+              <span class="badge badge--garnet">Mental Health</span>
+              <span class="badge badge--teal">Android (Java)</span>
+              <span class="badge badge--teal">ASP.NET Core</span>
+              <span class="badge badge--teal">FastAPI</span>
+              <span class="badge badge--teal">BERT</span>
+              <span class="badge badge--teal">Firebase Firestore</span>
+              <span class="badge badge--teal">Stripe</span>
+            </div>
+            <p style="margin-top: var(--sp-4);">
+              <a class="btn btn--garnet" href="fyp.html">Explore the full FYP →</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- 02 - HAR System -->
+        <article class="project-card" id="project-2">
+          <div>
+            <div class="project-card__num">02 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/02-har-system.jpg" alt="Human Activity Recognition system demo">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Software Construction (SC) + Data Science (DS)</div>
+            <h3>Human Activity Recognition (HAR) System</h3>
+            <p class="text-small text-soft">
+              A real-time human activity recognition system that classifies actions such as walking,
+              running, and sitting from live video, using a pre-trained ONNX CNN model trained on the
+              Kinetics Human Action Video Dataset (400 actions). GPU-accelerated frame processing, with a
+              Django front end for authentication.
+            </p>
+            <div>
+              <span class="badge">Python</span>
+              <span class="badge">OpenCV</span>
+              <span class="badge">ONNX / CNN</span>
+              <span class="badge">Django</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 - Orrery Web App -->
+        <article class="project-card" id="project-3">
+          <div>
+            <div class="project-card__num">03 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/03-orrery-web-app.jpg" alt="Orrery web app visualizing the solar system">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">NASA Space Apps Challenge 2024 - Hackathon</div>
+            <h3>Orrery Web App, Solar System &amp; NEO Visualization</h3>
+            <p class="text-small text-soft">
+              An interactive web app rendering a real-time orrery of the Solar System and Near-Earth
+              Objects, with zoom, pan, and focus controls. Built for NASA's "Create an Orrery Web App"
+              challenge, with Firebase Authentication and live NEO data pulled from external APIs.
+            </p>
+            <div>
+              <span class="badge">Flutter</span>
+              <span class="badge">Node.js</span>
+              <span class="badge">Firebase</span>
+              <span class="badge">Docker</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04 - AtmosPredict -->
+        <article class="project-card" id="project-4">
+          <div>
+            <div class="project-card__num">04 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/04-atmospredict.jpg" alt="AtmosPredict weather forecasting dashboard">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Numerical Analysis (NA)</div>
+            <h3>AtmosPredict, Comparative Forecasting Using Numerical &amp; ML Methods</h3>
+            <p class="text-small text-soft">
+              A Streamlit app forecasting temperature for major Pakistani cities, comparing numerical
+              methods (Lagrange and Newton interpolation, cubic splines) against a Random Forest model,
+              validated with RMSE and live OpenWeatherMap data. A hybrid model blends numerical, ML, and
+              real-time predictions, backed by 25+ visualizations of trend, seasonality, and anomalies.
+            </p>
+            <div>
+              <span class="badge">Python</span>
+              <span class="badge">Streamlit</span>
+              <span class="badge">Scikit-learn</span>
+              <span class="badge">Pandas / NumPy</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 05 - Airways Dijkstra -->
+        <article class="project-card" id="project-5">
+          <div>
+            <div class="project-card__num">05 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/05-airways-dijkstra.jpg" alt="Airways management shortest path app">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Data Structures &amp; Algorithms (DSA)</div>
+            <h3>Airways Management using Dijkstra's Algorithm</h3>
+            <p class="text-small text-soft">
+              A C# GUI application computing the shortest route between airports across Pakistan using
+              Dijkstra's algorithm. Users can assign custom path weights, reset selections, and save or
+              load configurations as XML, with live mapping via the GMap.NET.Windows API.
+            </p>
+            <div>
+              <span class="badge">C#</span>
+              <span class="badge">Dijkstra's Algorithm</span>
+              <span class="badge">GMap.NET</span>
+              <span class="badge">XML</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 06 - Text Summarization -->
+        <article class="project-card" id="project-6">
+          <div>
+            <div class="project-card__num">06 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/06-text-summarization.jpg" alt="Text summarization web app interface">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Natural Language Processing (NLP)</div>
+            <h3>Text Summarization System</h3>
+            <p class="text-small text-soft">
+              A full NLP pipeline that condenses news articles and reports into concise summaries.
+              TF-IDF keyword extraction, extractive summarization with positional-bonus sentence scoring
+              and cosine-similarity redundancy removal, a simplified abstractive mode via sentence fusion,
+              and a custom ROUGE-1/2/L evaluator, served through a Flask web app.
+            </p>
+            <div>
+              <span class="badge">Python</span>
+              <span class="badge">TF-IDF</span>
+              <span class="badge">ROUGE evaluation</span>
+              <span class="badge">Flask</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 07 - Hotel Network Design -->
+        <article class="project-card" id="project-7">
+          <div>
+            <div class="project-card__num">07 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/07-hotel-network.jpg" alt="Hotel network design topology diagram">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Computer Communication and Networks (CCN)</div>
+            <h3>Hotel Management Network Design</h3>
+            <p class="text-small text-soft">
+              A hierarchical network design for a three-floor hotel with department-level VLAN isolation,
+              OSPF for dynamic inter-floor routing, DHCP-based IP allocation, SSH remote access, port
+              security with sticky MAC, and integrated wireless connectivity, configured in Cisco Packet
+              Tracer.
+            </p>
+            <div>
+              <span class="badge">VLAN</span>
+              <span class="badge">OSPF</span>
+              <span class="badge">DHCP / SSH</span>
+              <span class="badge">Cisco Packet Tracer</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 08 - Metro Bus Transport -->
+        <article class="project-card" id="project-8">
+          <div>
+            <div class="project-card__num">08 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/08-metro-transport.jpg" alt="Metro bus transport management system">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Database (DBMS) + Software Design and Architecture (SDA)</div>
+            <h3>Transport Management System (Metro Bus)</h3>
+            <p class="text-small text-soft">
+              A web application for metro bus operations, user authentication, route and schedule
+              management, ticket booking, and passenger records, built on ASP.NET Web Forms with an n-tier
+              architecture and the Abstract Factory design pattern.
+            </p>
+            <div>
+              <span class="badge">C#</span>
+              <span class="badge">ASP.NET Web Forms</span>
+              <span class="badge">SQL Server</span>
+              <span class="badge">Abstract Factory Pattern</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 09 - Library Management -->
+        <article class="project-card" id="project-9">
+          <div>
+            <div class="project-card__num">09 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/09-library-management.jpg" alt="Library management system interface">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Object Oriented Programming (OOP), Java, NetBeans</div>
+            <h3>Library Management System</h3>
+            <p class="text-small text-soft">
+              A Java desktop application for managing library records, adding, updating, and issuing books
+              by member code, built to deliberately demonstrate core OOP principles: encapsulation,
+              interface-based inheritance, object instantiation, and abstraction across a clean class
+              structure.
+            </p>
+            <div>
+              <span class="badge">Java</span>
+              <span class="badge">NetBeans</span>
+              <span class="badge">OOP</span>
+              <span class="badge">JDBC</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10 - GateSmart -->
+        <article class="project-card" id="project-10">
+          <div>
+            <div class="project-card__num">10 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/10-gatesmart.jpg" alt="GateSmart visitor management system with QR code">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Web Applications + Marketing</div>
+            <h3>GateSmart: Visitors Management</h3>
+            <p class="text-small text-soft">
+              A smart visitor-management web app for gated societies, visitor passes with QR codes,
+              QR-based checkout, resident and society management, and visitor analytics with downloadable
+              PDF reports.
+            </p>
+            <div>
+              <span class="badge">ASP.NET MVC</span>
+              <span class="badge">SQL Server</span>
+              <span class="badge">QR Codes</span>
+              <span class="badge">PDF Reporting</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11 - Arduino Traffic Lights -->
+        <article class="project-card" id="project-11">
+          <div>
+            <div class="project-card__num">11 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/11-arduino-traffic.jpg" alt="Arduino traffic light controller circuit">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Applied Physics</div>
+            <h3>Arduino-based Traffic Lights Controlling System</h3>
+            <p class="text-small text-soft">
+              A two-way traffic signal built in hardware on an Arduino UNO with timed LED transitions, and
+              extended in software to a four-way simulation using a seven-segment countdown display,
+              demonstrating hardware and software integration in embedded systems.
+            </p>
+            <div>
+              <span class="badge">Arduino UNO</span>
+              <span class="badge">Embedded C</span>
+              <span class="badge">Seven-Segment Display</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12 - Coffee Shop -->
+        <article class="project-card" id="project-12">
+          <div>
+            <div class="project-card__num">12 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/12-coffee-shop.jpg" alt="Coffee shop ordering website and management app">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Graphic User Interface (GUI)</div>
+            <h3>Coffee Shop &amp; Ordering</h3>
+            <p class="text-small text-soft">
+              A two-part project: an MS Access driven desktop app for coffee shop management (customers,
+              receipts) paired with a standalone ordering website, item selection, live bill preview, and
+              invoice generation.
+            </p>
+            <div>
+              <span class="badge">MS Access</span>
+              <span class="badge">HTML / CSS</span>
+              <span class="badge">JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 13 - Game Simulation -->
+        <article class="project-card" id="project-13">
+          <div>
+            <div class="project-card__num">13 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/13-game-simulation.jpg" alt="Assembly language Snake game simulation">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Computer Architecture and Logic Design (CALD)</div>
+            <h3>Game Simulation</h3>
+            <p class="text-small text-soft">
+              A classic Snake game implemented entirely in Assembly language, handling movement, speed,
+              lives, and collision logic at the hardware-instruction level.
+            </p>
+            <div>
+              <span class="badge">Assembly</span>
+              <span class="badge">Computer Architecture</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 14 - Employee Management -->
+        <article class="project-card" id="project-14">
+          <div>
+            <div class="project-card__num">14 / 14</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/14-employee-management.jpg" alt="Employee management system interface">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Programming + Desktop Applications</div>
+            <h3>Employee Management System</h3>
+            <p class="text-small text-soft">
+              A C# desktop application performing full CRUD operations on employee records, with
+              comprehensive input validation and a clean WPF-based interface.
+            </p>
+            <div>
+              <span class="badge">C#</span>
+              <span class="badge">WPF</span>
+              <span class="badge">CRUD</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© Ayesha, Karachi, Pakistan</span>
+    <span>
+      <a href="tel:+923343142993">+92 334 3142993</a> ·
+      <a href="https://www.linkedin.com/in/ayesha-mishree-78b141256/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://github.com/AyeshaMishree" target="_blank" rel="noopener">GitHub</a>
+    </span>
+  </footer>
+
+  <!-- Shared lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">Close</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/lightbox.js"></script>
+</body>
+</html>

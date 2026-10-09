@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FYP: EmoCare – Ayesha</title>
+  <meta name="description" content="EmoCare, Ayesha's Final Year Project: an AI-driven mental health platform with verified therapist integration, built on Android, ASP.NET Core, and FastAPI.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a class="navbar__brand" href="index.html">Ayesha<span>.</span></a>
+      <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar__menu" id="navMenu" aria-label="Primary">
+        <a class="navbar__link" href="index.html">Home</a>
+        <a class="navbar__link" href="projects.html">Projects</a>
+        <a class="navbar__link" href="fyp.html">FYP</a>
+        <a class="navbar__link" href="mental-health.html">Mental Health Tech</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page__inner">
+
+      <!-- Detail hero -->
+      <section class="detail-hero">
+        <div class="detail-hero__media">
+          <img src="assets/images/projects/01-emocare.jpg" alt="EmoCare app screens, journaling, mood tracker, and therapist booking">
+        </div>
+
+        <div class="hero__eyebrow">final year project, bahria university</div>
+        <h1>EmoCare</h1>
+        <div class="hero__role">Smart Mental Health Application with AI and Therapist Support</div>
+
+        <p class="text-soft">
+          EmoCare is Ayesha's idea for one of Pakistan's first integrated AI and therapist mental health
+          platforms. It was built to be accessible, affordable, and culturally relevant, addressing rising
+          psychological challenges among students, professionals, and teenagers in Pakistan. It combines
+          AI-driven emotional support, smart journaling, mood-based analytics, and verified therapist
+          connectivity with secure in-app payment, inside a single, privacy-conscious ecosystem.
+        </p>
+
+        <div>
+          <span class="badge badge--garnet">Mental Health</span>
+          <span class="badge badge--teal">AI / NLP</span>
+          <span class="badge badge--teal">Android</span>
+          <span class="badge badge--teal">ASP.NET Core</span>
+          <span class="badge badge--teal">FastAPI</span>
+        </div>
+
+        <p style="margin-top: var(--sp-5);">
+          <a class="btn btn--garnet" href="mental-health.html">See it in the Mental Health Tech story →</a>
+        </p>
+      </section>
+
+      <!-- Overview -->
+      <section class="section">
+        <h2>Overview</h2>
+        <p>
+          The project follows an incremental, modular methodology. The founding team continuously
+          integrated new modules and validated them through internal review, supervisor feedback, and
+          consultation with domain experts in clinical psychology, all while maintaining strict privacy
+          and security protocols around sensitive mental health data.
+        </p>
+        <p class="text-soft">
+          Findings from the project showed that pairing AI-driven self-help tools with verified therapist
+          support and server-side payment confirmation meaningfully improves accessibility, personalization,
+          and continuity of care compared to the fragmented digital mental health tools already on the
+          market, most of which skip verified therapist integration, secure payment, or crisis-escalation
+          paths entirely.
+        </p>
+      </section>
+
+      <!-- Architecture -->
+      <section class="section">
+        <h2>Architecture</h2>
+        <p>
+          EmoCare runs on a modular three-tier architecture, with an Android front end, an ASP.NET Core
+          backend, and a Python FastAPI AI microservice, all sharing Firebase Firestore as a common source
+          of truth.
+        </p>
+
+        <div class="panel panel--teal" style="margin-bottom: var(--sp-5);">
+          <h4>Two-stage AI pipeline</h4>
+          <p class="text-small text-soft">
+            <strong>Stage A</strong>: a locally hosted, fine-tuned BERT classifier
+            (<code>BertForSequenceClassification</code>) predicts the user's mental state from journal or
+            chat text.<br>
+            <strong>Stage B</strong>: that label is passed to a remote LLM call via OpenRouter
+            (<code>openai/gpt-oss-120b:free</code>), which generates a short CBT-inspired reply or coping
+            recommendation.<br><br>
+            A hard-coded safety branch short-circuits to a crisis message whenever the classifier returns
+            <em>"suicidal,"</em> and a set of canned empathetic fallback responses covers any failure of
+            the LLM call, so the system degrades gracefully rather than silently.
+          </p>
+        </div>
+
+        <p class="text-small text-soft">
+          The Android app serves both patients and therapists from a single APK, with the correct role
+          dispatched at runtime from a role document in Firestore. Local reminders, a daily motivational
+          quote, journaling nudges, and a weekly check-in, are scheduled entirely on-device using Android
+          WorkManager, with no push server required.
+        </p>
+      </section>
+
+      <!-- Features -->
+      <section class="section">
+        <h2>Key Features</h2>
+        <ul class="text-soft">
+          <li><strong>AI Chatbot Therapist (Premium).</strong> 24/7 CBT-based conversations, context-aware using journal and mood history.</li>
+          <li><strong>Smart Journaling with Sentiment Analysis.</strong> Each entry returns a predicted emotional state and a tailored recommendation.</li>
+          <li><strong>Mood Tracker with Insights.</strong> Weekly and monthly visual trend graphs across emotional states.</li>
+          <li><strong>Therapist Integration.</strong> Document-based verification, admin approval, session booking, and secure Stripe payment.</li>
+          <li><strong>In-App Chat and Audio/Video Calls.</strong> Kommunicate SDK for messaging, WebRTC for live sessions.</li>
+          <li><strong>Mindfulness &amp; Self-Care Toolkit.</strong> Guided audio, meditation videos, and reading material, no appointment needed.</li>
+          <li><strong>Role-Based Privacy.</strong> Patient, therapist, and admin access enforced at both the Firebase rules layer and the backend.</li>
+          <li><strong>Therapist Earnings &amp; Withdrawal.</strong> Therapists can review paid sessions and request payouts directly in-app.</li>
+        </ul>
+      </section>
+
+      <!-- Tech stack -->
+      <section class="section">
+        <h2>Technology Stack</h2>
+
+        <div class="skills-grid">
+          <div class="skills-group">
+            <h4>Mobile Client</h4>
+            <span class="badge">Android Studio (Java)</span>
+            <span class="badge">Firebase Auth</span>
+            <span class="badge">Stripe Android SDK</span>
+            <span class="badge">WebRTC</span>
+            <span class="badge">Kommunicate SDK</span>
+            <span class="badge">WorkManager</span>
+          </div>
+
+          <div class="skills-group">
+            <h4>Backend Service</h4>
+            <span class="badge">ASP.NET Core 8</span>
+            <span class="badge">Stripe .NET SDK</span>
+            <span class="badge">MailKit / MimeKit</span>
+            <span class="badge">Firebase Admin SDK</span>
+          </div>
+
+          <div class="skills-group">
+            <h4>AI Microservice</h4>
+            <span class="badge">Python / FastAPI</span>
+            <span class="badge">PyTorch</span>
+            <span class="badge">Hugging Face Transformers</span>
+            <span class="badge">OpenRouter API</span>
+          </div>
+
+          <div class="skills-group">
+            <h4>Data &amp; Tooling</h4>
+            <span class="badge">Firebase Firestore</span>
+            <span class="badge">ngrok</span>
+            <span class="badge">Git / GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team & credits -->
+      <section class="section">
+        <h2>Team &amp; Credits</h2>
+        <p class="text-soft">
+          Built together with teammates <strong>Arifa Naseem</strong> and <strong>Taiba Hussain</strong>,
+          under the supervision of <strong>Muhammad Adnan ur Rehman</strong>, with guidance from FYP
+          coordinator <strong>Mahawish Fatima, PhD</strong>. Department of Software Engineering, Bahria
+          University.
+        </p>
+      </section>
+
+      <!-- Recognition -->
+      <section class="section">
+        <h2>Recognition</h2>
+        <p class="text-soft">
+          EmoCare was selected among the <strong>Top 10 projects</strong> at the Department of Software
+          Engineering's FYP Exhibition, and went on to secure <strong>1st position</strong> at Karachi
+          University's Pharmacy Science Club science fair, "The Health Nexus." A research paper built on
+          this work is currently under review at a Scopus-indexed journal.
+        </p>
+        <p>
+          <a class="btn btn--garnet" href="mental-health.html">See the full Mental Health Tech story →</a>
+        </p>
+      </section>
+
+      <p>
+        <a class="btn" href="projects.html">← Back to all projects</a>
+      </p>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© Ayesha, Karachi, Pakistan</span>
+    <span>
+      <a href="tel:+923343142993">+92 334 3142993</a> ·
+      <a href="https://www.linkedin.com/in/ayesha-mishree-78b141256/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://github.com/AyeshaMishree" target="_blank" rel="noopener">GitHub</a>
+    </span>
+  </footer>
+
+  <!-- Shared lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">Close</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/lightbox.js"></script>
+</body>
+</html>

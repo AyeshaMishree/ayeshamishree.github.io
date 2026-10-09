@@ -1,0 +1,79 @@
+/* ============================================================
+   DESIGN TOKENS — Ayesha · Portfolio (v2)
+   Two accent threads run through the whole site:
+   TEAL  = engineering / systems / technical work
+   GARNET = mental-health / human-centered work
+   ============================================================ */
+
+:root {
+  /* ---- Color ---- */
+  --paper:        #F6F5F1;
+  --paper-raised: #FBFAF7;
+  --ink:          #1C2430;
+  --ink-soft:     #4B5563;
+  --ink-faint:    #8B93A1;
+  --teal:         #178F82;
+  --teal-deep:    #0F6B61;
+  --teal-tint:    #E1F0EE;
+  --garnet:       #B23A4E;
+  --garnet-deep:  #8C2B3C;
+  --garnet-tint:  #F6E4E7;
+  --line:         #DAD7CF;
+  --line-strong:  #BFBBB0;
+  --white:        #FFFFFF;
+
+  /* ---- Type families ----
+     Load in <head> of every HTML page:
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  */
+  --font-display: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono:    'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+
+  /* ---- Type scale ---- */
+  --fs-10: 0.8125rem;
+  --fs-11: 0.9375rem;
+  --fs-12: 1.0625rem;
+  --fs-13: 1.1875rem;
+  --fs-14: 1.375rem;
+  --fs-15: 1.75rem;
+  --fs-16: 2.25rem;
+  --fs-17: 3rem;
+  --fs-18: 3.75rem;
+
+  --lh-tight: 1.15;
+  --lh-snug:  1.35;
+  --lh-body:  1.6;
+
+  /* ---- Space (base 4px) ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  /* ---- Layout ---- */
+  --content-max: 880px;
+  --nav-max: 1200px;
+  --radius-media: 2px 14px 2px 2px; /* asymmetric corner — media only, never data panels */
+  --border: 1px solid var(--line);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-med: 320ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-med: 0ms;
+  }
+}

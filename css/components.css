@@ -1,0 +1,334 @@
+/* ============================================================
+   COMPONENTS — navbar, buttons, badges, cards, highlights, lightbox (v2)
+   Requires variables.css + base.css loaded first.
+   ============================================================ */
+
+/* ---------------------------------------------------------
+   Top navbar
+   --------------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--paper);
+  border-bottom: 2px solid var(--ink);
+}
+
+.navbar__inner {
+  max-width: var(--nav-max);
+  margin: 0 auto;
+  padding: var(--sp-4) var(--sp-7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-6);
+  position: relative;
+}
+
+.navbar__brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-14);
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.navbar__brand span { color: var(--teal); }
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-7);
+}
+
+.navbar__link {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-11);
+  color: var(--ink-soft);
+  padding: var(--sp-2) 0;
+  border-bottom: 3px solid transparent;
+  transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+
+.navbar__link:hover { color: var(--ink); }
+
+.navbar__link[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--teal);
+}
+
+/* ---- Mobile hamburger + dropdown ---- */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--sp-2);
+}
+
+.navbar__toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+  transition: transform var(--dur-fast) var(--ease), opacity var(--dur-fast) var(--ease);
+}
+
+@media (max-width: 880px) {
+  .navbar__inner { padding: var(--sp-4) var(--sp-5); }
+  .navbar__toggle { display: flex; }
+
+  .navbar__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 2px solid var(--ink);
+  }
+
+  body.nav-open .navbar__menu { display: flex; }
+
+  .navbar__link {
+    padding: var(--sp-4) var(--sp-5);
+    border-bottom: 1px solid var(--line);
+    border-left: 3px solid transparent;
+  }
+
+  .navbar__link[aria-current="page"] {
+    border-bottom: 1px solid var(--line);
+    border-left-color: var(--teal);
+  }
+
+  body.nav-open .navbar__toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  body.nav-open .navbar__toggle span:nth-child(2) { opacity: 0; }
+  body.nav-open .navbar__toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+/* ---------------------------------------------------------
+   Inline highlights — bold, clickable terms inside paragraphs
+   (used in the intro bio to point at the research paper, the
+   award, and the mental-health work)
+   --------------------------------------------------------- */
+.hl {
+  font-weight: 600;
+  color: var(--teal-deep);
+  background: var(--teal-tint);
+  padding: 0 0.3em;
+  border-radius: 3px;
+  box-shadow: inset 0 -2px 0 var(--teal);
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+
+.hl:hover { background: var(--teal); color: var(--white); }
+
+.hl--garnet {
+  color: var(--garnet-deep);
+  background: var(--garnet-tint);
+  box-shadow: inset 0 -2px 0 var(--garnet);
+}
+
+.hl--garnet:hover { background: var(--garnet); color: var(--white); }
+
+/* ---------------------------------------------------------
+   Buttons
+   --------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-display);
+  font-size: var(--fs-11);
+  font-weight: 600;
+  padding: var(--sp-3) var(--sp-5);
+  border: 2px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease),
+              transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(28, 36, 48, 0.18);
+}
+
+.btn--teal { border-color: var(--teal); color: var(--teal-deep); }
+.btn--teal:hover { background: var(--teal); color: var(--white); box-shadow: 0 6px 16px rgba(23, 143, 130, 0.28); }
+
+.btn--garnet { border-color: var(--garnet); color: var(--garnet-deep); }
+.btn--garnet:hover { background: var(--garnet); color: var(--white); box-shadow: 0 6px 16px rgba(178, 58, 78, 0.28); }
+
+/* ---------------------------------------------------------
+   Badges — tech-stack chips. Mono face is used here because
+   the content genuinely is technical/literal, not decorative.
+   --------------------------------------------------------- */
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-10);
+  font-weight: 500;
+  padding: var(--sp-1) var(--sp-3);
+  border: 1px solid var(--line-strong);
+  color: var(--ink-soft);
+  margin: 0 var(--sp-2) var(--sp-2) 0;
+  background: var(--paper-raised);
+}
+
+.badge--teal   { border-color: var(--teal);   color: var(--teal-deep);   background: var(--teal-tint); font-weight: 600; }
+.badge--garnet { border-color: var(--garnet); color: var(--garnet-deep); background: var(--garnet-tint); font-weight: 600; }
+
+/* ---------------------------------------------------------
+   Panels & cards
+   --------------------------------------------------------- */
+.panel {
+  border: var(--border);
+  border-top: 3px solid var(--ink);
+  padding: var(--sp-6);
+  background: var(--paper-raised);
+  transition: transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+
+.panel--teal   { border-top-color: var(--teal); }
+.panel--garnet { border-top-color: var(--garnet); }
+
+.panel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(28, 36, 48, 0.10);
+}
+
+.card-grid {
+  display: grid;
+  gap: var(--sp-6);
+}
+
+/* Project card (Projects page) */
+.project-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--sp-6);
+  padding-bottom: var(--sp-7);
+  border-bottom: var(--border);
+}
+
+.project-card__num {
+  font-family: var(--font-display);
+  font-size: var(--fs-10);
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: var(--sp-1);
+}
+
+.project-card__media {
+  width: 220px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: var(--radius-media);
+  border: var(--border);
+  cursor: zoom-in;
+  background: var(--line);
+}
+
+.project-card__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-med) var(--ease);
+}
+
+.project-card__media:hover img { transform: scale(1.04); }
+
+.project-card__course {
+  font-family: var(--font-display);
+  font-size: var(--fs-10);
+  font-weight: 700;
+  color: var(--teal-deep);
+  margin-bottom: var(--sp-1);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 640px) {
+  .project-card { grid-template-columns: 1fr; }
+  .project-card__media { width: 100%; height: 200px; }
+}
+
+/* Highlight card (Home page: FYP / Mental Health / Research links) */
+.highlight-card {
+  display: block;
+  padding: var(--sp-6);
+  border: var(--border);
+  border-left: 4px solid var(--teal);
+  background: var(--paper-raised);
+  transition: border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease),
+              box-shadow var(--dur-fast) var(--ease);
+}
+
+.highlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(28, 36, 48, 0.10);
+}
+
+.highlight-card--garnet { border-left-color: var(--garnet); }
+
+.highlight-card h3 { margin-bottom: var(--sp-2); }
+.highlight-card p { margin-bottom: var(--sp-3); font-size: var(--fs-11); }
+
+.highlight-card__cta {
+  font-family: var(--font-display);
+  font-size: var(--fs-10);
+  font-weight: 700;
+  color: var(--teal);
+}
+
+.highlight-card--garnet .highlight-card__cta { color: var(--garnet); }
+
+/* ---------------------------------------------------------
+   Lightbox — click any framed image to enlarge
+   --------------------------------------------------------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 36, 48, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-6);
+  z-index: 100;
+}
+
+.lightbox.is-open { display: flex; }
+
+.lightbox img {
+  max-width: min(1100px, 90vw);
+  max-height: 86vh;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: var(--sp-5);
+  right: var(--sp-5);
+  background: none;
+  border: 1px solid var(--white);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: var(--fs-10);
+  font-weight: 600;
+  padding: var(--sp-2) var(--sp-4);
+  cursor: pointer;
+}
+
+.lightbox__close:hover { background: var(--white); color: var(--ink); }

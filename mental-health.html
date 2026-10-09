@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Technology – Ayesha</title>
+  <meta name="description" content="Ayesha's work at the intersection of software engineering and mental health: the EmoCare FYP, a research paper under review, and recognition at a university exhibition and a national science fair.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a class="navbar__brand" href="index.html">Ayesha<span>.</span></a>
+      <button class="navbar__toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar__menu" id="navMenu" aria-label="Primary">
+        <a class="navbar__link" href="index.html">Home</a>
+        <a class="navbar__link" href="projects.html">Projects</a>
+        <a class="navbar__link" href="fyp.html">FYP</a>
+        <a class="navbar__link" href="mental-health.html">Mental Health Tech</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page__inner">
+
+      <!-- Intro -->
+      <section class="hero" style="grid-template-columns: 1fr; border-bottom: none; padding-bottom: 0; margin-bottom: var(--sp-7);">
+        <div>
+          <div class="hero__eyebrow">software engineering × mental health</div>
+          <h1>Mental Health Technology</h1>
+          <p class="text-soft">
+            Alongside systems engineering work, a sustained thread runs through Ayesha's degree: using AI
+            and software engineering to make mental health support more accessible, affordable, and
+            trustworthy, particularly in resource-constrained, stigma-sensitive contexts like Pakistan.
+            That work has taken shape as EmoCare, her idea for one of Pakistan's first integrated AI and
+            therapist mental health platforms, recognition at a university exhibition and a national
+            science fair, and a research paper now under review at a Scopus-indexed journal.
+          </p>
+        </div>
+      </section>
+
+      <!-- The project -->
+      <section class="section">
+        <h2>The Project</h2>
+        <div class="panel panel--garnet">
+          <h3>EmoCare, Smart Mental Health App with AI &amp; Therapist Support</h3>
+          <p class="text-small text-soft">
+            A three-tier platform, Android client, ASP.NET Core backend, Python FastAPI AI microservice,
+            combining a two-stage AI pipeline (BERT emotion classification, followed by an LLM-generated
+            CBT-style response) with verified therapist booking, secure Stripe payment, and a built-in
+            crisis-safety branch.
+          </p>
+          <a class="btn btn--garnet" href="fyp.html">Read the full FYP breakdown →</a>
+        </div>
+      </section>
+
+      <!-- Recognition -->
+      <section class="section" id="recognition"></section>
+        <h2>Recognition</h2>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: var(--sp-6);">
+
+          <article class="panel panel--garnet">
+            <div class="media-row__item" style="margin-bottom: var(--sp-4);">
+              <img src="assets/images/mental-health/fyp-exhibition-top10.jpg" alt="Ayesha presenting EmoCare to university externals and admirals at the Bahria University FYP Exhibition">
+            </div>
+            <span class="badge badge--garnet">Top 10, FYP Exhibition</span>
+            <h3>Department of Software Engineering, Bahria University</h3>
+            <p class="text-small text-soft">
+              EmoCare was selected among the Top 10 projects at the department's FYP Exhibition. Ayesha
+              presented the project in front of university externals and admirals, sharing the idea of
+              combining AI-powered emotional support, therapist connectivity, and self-care tools into one
+              platform.
+            </p>
+          </article>
+
+          <article class="panel panel--garnet">
+            <div class="media-row__item" style="margin-bottom: var(--sp-4);">
+              <img src="assets/images/mental-health/sciencefair.jpg" alt="1st place certificate and shield from The Health Nexus science fair">
+            </div>
+            <span class="badge badge--garnet">1st Place, The Health Nexus</span>
+            <h3>Karachi University, Pharmacy Science Club</h3>
+            <p class="text-small text-soft">
+              Secured 1st position at "The Health Nexus" science fair, 3 September 2026, presenting a
+              functional prototype demonstrating how engineering, technology, and AI can make mental
+              health more accessible through digital platforms.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Research paper -->
+      <section class="section" id="research">
+        <h2>Research Paper</h2>
+        <span class="badge badge--garnet">Under Review, Not Yet Published</span>
+
+        <h3 style="margin-top: var(--sp-5);">
+          EmoCare: A Two-Stage AI Pipeline with Verified Therapist Integration for Mental-Health Support
+          in a Resource-Constrained, Stigma-Sensitive Context
+        </h3>
+
+        <p class="text-soft">
+          Currently under review at the <strong>International Journal of Medical Informatics</strong>
+          (Scopus-indexed, CiteScore 8.8, 84th percentile, ranked 27 of 168 in Health Informatics),
+          co-authored with teammates Arifa Naseem and Taiba Hussain, and supervisor Engr. M. Adnan Ur
+          Rehman, Department of Software Engineering, Bahria University Karachi Campus.
+        </p>
+
+        <div class="citation-block">
+          Ayesha<sup>*</sup>, A. Naseem, T. Hussain, M. Adnan Ur Rehman.<br>
+          "EmoCare: A Two-Stage AI Pipeline with Verified Therapist Integration for Mental-Health Support
+          in a Resource-Constrained, Stigma-Sensitive Context."<br>
+          Department of Software Engineering, Bahria University Karachi Campus, Pakistan.<br>
+          <em>International Journal of Medical Informatics</em>, under review.<br>
+          <sup>*</sup>Corresponding author.
+        </div>
+
+        <h4>Keywords</h4>
+        <p>
+          <span class="badge badge--garnet">Mental Health</span>
+          <span class="badge badge--garnet">AI Chatbot</span>
+          <span class="badge badge--garnet">BERT</span>
+          <span class="badge badge--garnet">Large Language Model</span>
+          <span class="badge badge--garnet">Stripe Webhook Verification</span>
+          <span class="badge badge--garnet">Firebase Firestore</span>
+          <span class="badge badge--garnet">Cognitive Behavioural Therapy</span>
+        </p>
+
+        <h4>What the paper covers</h4>
+        <p class="text-small text-soft">
+          The paper situates EmoCare against three bodies of work: conversational AI for mental health,
+          digital health platforms with therapist marketplaces (such as BetterHelp), and transformer-based
+          emotion classification using hosted LLMs as empathetic-response generators. It argues that most
+          existing mental health chatbots remain AI-only, lacking verified therapist consultation, secure
+          payment handling, or formal crisis-escalation, and positions EmoCare's two-stage pipeline as a
+          direct response to that gap.
+        </p>
+        <p class="text-small text-soft">
+          The Stage-A classifier was fine-tuned on the publicly available <em>Sentiment Analysis for
+          Mental Health</em> dataset (Kaggle, by Suchintika Sarkar), labelled across seven mental health
+          statuses: Normal, Depression, Suicidal, Anxiety, Stress, Bi-Polar, and Personality Disorder.
+          Stage B routes the classified state through OpenRouter to <code>openai/gpt-oss-120b:free</code>
+          for CBT-aligned response generation. Supporting infrastructure includes Stripe webhook signature
+          verification, Stripe Checkout, Firebase Firestore, ASP.NET Core, and FastAPI.
+        </p>
+      </section>
+
+      <!-- Closing CTA -->
+      <section class="section">
+        <p>
+          <a class="btn btn--garnet" href="fyp.html">Explore the full EmoCare FYP →</a>
+          &nbsp;
+          <a class="btn" href="projects.html">← Back to all projects</a>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© Ayesha, Karachi, Pakistan</span>
+    <span>
+      <a href="tel:+923343142993">+92 334 3142993</a> ·
+      <a href="https://www.linkedin.com/in/ayesha-mishree-78b141256/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://github.com/AyeshaMishree" target="_blank" rel="noopener">GitHub</a>
+    </span>
+  </footer>
+
+  <!-- Shared lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">Close</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/lightbox.js"></script>
+</body>
+</html>

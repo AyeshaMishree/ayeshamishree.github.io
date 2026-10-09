@@ -1,0 +1,217 @@
+/* ============================================================
+   PAGES — section-specific layout (v2)
+   Requires variables.css + base.css + components.css loaded first.
+   ============================================================ */
+
+/* ---------------------------------------------------------
+   Home — hero
+   --------------------------------------------------------- */
+.hero {
+  padding: var(--sp-7) 0 var(--sp-8);
+  border-bottom: var(--border);
+  margin-bottom: var(--sp-8);
+}
+
+.hero__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-12);
+  font-weight: 500;
+  color: var(--teal-deep);
+  margin-bottom: var(--sp-3);
+}
+
+.hero h1 {
+  position: relative;
+  margin-bottom: var(--sp-5);
+  padding-bottom: var(--sp-4);
+}
+
+.hero h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 72px;
+  height: 5px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--teal), var(--garnet));
+}
+
+.hero__role {
+  font-family: var(--font-display);
+  font-size: var(--fs-13);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--sp-5);
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-5);
+  font-size: var(--fs-11);
+  color: var(--ink-soft);
+}
+
+/* Intro row: paragraph + contact links on the left, round photo on the right */
+.hero__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: var(--sp-7);
+  align-items: center;
+}
+
+.hero__photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 3px solid var(--teal);
+  padding: 4px;
+  overflow: hidden;
+  background: var(--paper-raised);
+}
+
+.hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+}
+
+@media (max-width: 760px) {
+  .hero__body { grid-template-columns: 1fr; gap: var(--sp-6); }
+  .hero__photo { order: -1; width: 180px; height: 180px; }
+}
+
+/* ---------------------------------------------------------
+   Home — highlight rail (FYP / Mental Health / Research)
+   --------------------------------------------------------- */
+.highlights { margin-bottom: var(--sp-8); }
+
+.highlights__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-5);
+}
+
+/* ---------------------------------------------------------
+   Home — experience / education timeline
+   --------------------------------------------------------- */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--sp-5);
+  padding: var(--sp-5) 0;
+  border-bottom: var(--border);
+}
+
+.timeline-item__period {
+  font-family: var(--font-mono);
+  font-size: var(--fs-10);
+  font-weight: 500;
+  color: var(--ink-faint);
+}
+
+.timeline-item h4 { margin-bottom: var(--sp-1); }
+
+.timeline-item__org {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: var(--fs-11);
+  margin-bottom: var(--sp-2);
+}
+
+@media (max-width: 640px) {
+  .timeline-item { grid-template-columns: 1fr; gap: var(--sp-2); }
+}
+
+/* ---------------------------------------------------------
+   Home — skills
+   --------------------------------------------------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--sp-6);
+}
+
+.skills-group h4 { color: var(--teal-deep); margin-bottom: var(--sp-3); }
+
+/* ---------------------------------------------------------
+   Projects page
+   --------------------------------------------------------- */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-7);
+}
+
+.projects-list .project-card:last-child { border-bottom: none; }
+
+/* ---------------------------------------------------------
+   FYP / Mental Health detail pages
+   --------------------------------------------------------- */
+.detail-hero {
+  margin-bottom: var(--sp-8);
+  padding-bottom: var(--sp-7);
+  border-bottom: var(--border);
+}
+
+.detail-hero__media {
+  width: 100%;
+  max-height: 420px;
+  overflow: hidden;
+  border: var(--border);
+  border-radius: var(--radius-media);
+  margin-bottom: var(--sp-6);
+  cursor: zoom-in;
+}
+
+.detail-hero__media img { width: 100%; height: 100%; object-fit: cover; }
+
+.section { margin-bottom: var(--sp-8); }
+
+.section + .section {
+  padding-top: var(--sp-7);
+  border-top: var(--border);
+}
+
+.media-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sp-5);
+  margin: var(--sp-5) 0;
+}
+
+.media-row__item {
+  border: var(--border);
+  overflow: hidden;
+  border-radius: var(--radius-media);
+  cursor: zoom-in;
+  background: var(--line);
+}
+
+.media-row__item img { width: 100%; height: 180px; object-fit: cover; }
+
+.media-row__caption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-10);
+  color: var(--ink-soft);
+  padding: var(--sp-2) var(--sp-3);
+  border-top: var(--border);
+  background: var(--paper-raised);
+}
+
+/* ---------------------------------------------------------
+   Research paper citation block
+   --------------------------------------------------------- */
+.citation-block {
+  font-family: var(--font-mono);
+  font-size: var(--fs-10);
+  line-height: var(--lh-snug);
+  color: var(--ink-soft);
+  padding: var(--sp-5);
+  border-left: 4px solid var(--garnet);
+  background: var(--garnet-tint);
+  margin: var(--sp-5) 0;
+}
