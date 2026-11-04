@@ -39,7 +39,7 @@
 
       <section class="hero" style="grid-template-columns: 1fr; border-bottom: none; padding-bottom: 0; margin-bottom: var(--sp-7);">
         <div>
-          <div class="hero__eyebrow">14 projects, in order of significance</div>
+          <div class="hero__eyebrow">15 projects, in order of significance</div>
           <h1>Projects</h1>
           <p class="text-soft">
             University work spanning AI and mobile development, web and database systems, networking,
@@ -53,7 +53,7 @@
         <!-- 01 - FYP EmoCare -->
         <article class="project-card" id="project-1">
           <div>
-            <div class="project-card__num">01 / 14</div>
+            <div class="project-card__num">01 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/emocare_report.jpg" alt="EmoCare mental health app screens">
             </div>
@@ -86,7 +86,7 @@
         <!-- 02 - HAR System -->
         <article class="project-card" id="project-2">
           <div>
-            <div class="project-card__num">02 / 14</div>
+            <div class="project-card__num">02 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/02-har-system.jpg" alt="Human Activity Recognition system demo">
             </div>
@@ -109,35 +109,83 @@
           </div>
         </article>
 
-        <!-- 03 - Orrery Web App -->
+        <!-- 03 - AI Twitter Trend Analyzer -->
         <article class="project-card" id="project-3">
           <div>
-            <div class="project-card__num">03 / 14</div>
+            <div class="project-card__num">03 / 15</div>
+            <div class="project-card__media">
+              <img src="assets/images/projects/03-ai-twitter-trend-analyzer.jpg" alt="AI Twitter Trend Analyzer Streamlit interface">
+            </div>
+          </div>
+          <div>
+            <div class="project-card__course">Artificial Intelligence (AI)</div>
+            <h3>AI Twitter Trend Analyzer</h3>
+            <p class="text-small text-soft">
+              An AI-powered tool that scrapes trending Twitter topics from Trends24 (no Twitter API
+              needed), classifies them into categories with Azure OpenAI GPT, and generates
+              context-aware tweet suggestions. Three Streamlit modules: Trend Selection (pick a category
+              and trend, generate and save a tweet), Trend Insights (category distribution, top keywords,
+              word cloud), and Saved Tweets (filter by category, trend, and date range, backed by SQLite).
+              Group project; I handled the interface and database.
+            </p>
+            <div>
+              <span class="badge">Python</span>
+              <span class="badge">Streamlit</span>
+              <span class="badge">Azure OpenAI</span>
+              <span class="badge">BeautifulSoup</span>
+              <span class="badge">NLTK</span>
+              <span class="badge">SQLite</span>
+              <span class="badge">WordCloud</span>
+            </div>
+          </div>
+        </article>
+        
+        <!-- 04 - Orrery Web App (Version 2: Cloud Computing) -->
+        <article class="project-card" id="project-4">
+          <div>
+            <div class="project-card__num">04 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/03-orrery-web-app.jpg" alt="Orrery web app visualizing the solar system">
             </div>
           </div>
           <div>
             <div class="project-card__course">NASA Space Apps Challenge 2024 - Hackathon</div>
+            <div class="project-card__course" style="margin-top: 4px;">Version 2.0: Upgraded for Cloud Computing (CC) course</div>
             <h3>Orrery Web App, Solar System &amp; NEO Visualization</h3>
             <p class="text-small text-soft">
               An interactive web app rendering a real-time orrery of the Solar System and Near-Earth
               Objects, with zoom, pan, and focus controls. Built for NASA's "Create an Orrery Web App"
               challenge, with Firebase Authentication and live NEO data pulled from external APIs.
+              The project was later upgraded and presented in the Cloud Computing course, re-architected
+              around managed cloud services, containerization, and cloud hosting.
             </p>
+            <p class="text-small text-soft" style="margin-bottom: var(--sp-2);"><strong>What changed in Version 2.0:</strong></p>
+            <ul class="text-small text-soft" style="padding-left: 1.2em; margin-top: 0;">
+              <li><strong>Cloud Database (Firebase Firestore):</strong> data stored and managed in a cloud-hosted, real-time database.</li>
+              <li><strong>Cloud Authentication (Firebase Authentication):</strong> cloud-based user sign-in through Google Sign-In.</li>
+              <li><strong>Cloud Services (Firebase):</strong> managed backend services instead of building everything from scratch.</li>
+              <li><strong>Containerization (Docker):</strong> the app is packaged into containers for portability and consistent deployment.</li>
+              <li><strong>Cloud Deployment/Hosting (GitHub Pages):</strong> an online hosting platform makes the app publicly accessible.</li>
+              <li><strong>Cloud-based API Integration:</strong> astronomical data fetched from NASA's remotely hosted API.</li>
+            </ul>
             <div>
               <span class="badge">Flutter</span>
               <span class="badge">Node.js</span>
               <span class="badge">Firebase</span>
               <span class="badge">Docker</span>
+              <span class="badge badge--teal">Cloud Computing</span>
+              <span class="badge badge--teal">Firestore</span>
+              <span class="badge badge--teal">Google Sign-In</span>
+              <span class="badge badge--teal">GitHub Pages</span>
+              <span class="badge badge--teal">NASA API</span>
             </div>
           </div>
         </article>
 
-        <!-- 04 - AtmosPredict -->
-        <article class="project-card" id="project-4">
+        <!-- 05 - AtmosPredict -->
+        <article class="project-card" id="project-5">
           <div>
-            <div class="project-card__num">04 / 14</div>
+            <div class="project-card__num">05 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/04-atmospredict.jpg" alt="AtmosPredict weather forecasting dashboard">
             </div>
@@ -160,10 +208,10 @@
           </div>
         </article>
 
-        <!-- 05 - Airways Dijkstra -->
-        <article class="project-card" id="project-5">
+        <!-- 06 - Airways Dijkstra -->
+        <article class="project-card" id="project-6">
           <div>
-            <div class="project-card__num">05 / 14</div>
+            <div class="project-card__num">06 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/05-airways-dijkstra.jpg" alt="Airways management shortest path app">
             </div>
@@ -185,10 +233,10 @@
           </div>
         </article>
 
-        <!-- 06 - Text Summarization -->
+        <!-- 07 - Text Summarization -->
         <article class="project-card" id="project-6">
           <div>
-            <div class="project-card__num">06 / 14</div>
+            <div class="project-card__num">07 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/06-text-summarization.jpg" alt="Text summarization web app interface">
             </div>
@@ -211,10 +259,10 @@
           </div>
         </article>
 
-        <!-- 07 - Hotel Network Design -->
-        <article class="project-card" id="project-7">
+        <!-- 08 - Hotel Network Design -->
+        <article class="project-card" id="project-8">
           <div>
-            <div class="project-card__num">07 / 14</div>
+            <div class="project-card__num">08 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/07-hotel-network.jpg" alt="Hotel network design topology diagram">
             </div>
@@ -237,10 +285,10 @@
           </div>
         </article>
 
-        <!-- 08 - Metro Bus Transport -->
-        <article class="project-card" id="project-8">
+        <!-- 09 - Metro Bus Transport -->
+        <article class="project-card" id="project-9">
           <div>
-            <div class="project-card__num">08 / 14</div>
+            <div class="project-card__num">09 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/08-metro-transport.jpg" alt="Metro bus transport management system">
             </div>
@@ -262,10 +310,10 @@
           </div>
         </article>
 
-        <!-- 09 - Library Management -->
-        <article class="project-card" id="project-9">
+        <!-- 10 - Library Management -->
+        <article class="project-card" id="project-10">
           <div>
-            <div class="project-card__num">09 / 14</div>
+            <div class="project-card__num">10 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/09-library-management.jpg" alt="Library management system interface">
             </div>
@@ -288,10 +336,10 @@
           </div>
         </article>
 
-        <!-- 10 - GateSmart -->
-        <article class="project-card" id="project-10">
+        <!-- 11 - GateSmart -->
+        <article class="project-card" id="project-11">
           <div>
-            <div class="project-card__num">10 / 14</div>
+            <div class="project-card__num">11 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/10-gatesmart.jpg" alt="GateSmart visitor management system with QR code">
             </div>
@@ -313,10 +361,10 @@
           </div>
         </article>
 
-        <!-- 11 - Arduino Traffic Lights -->
-        <article class="project-card" id="project-11">
+        <!-- 12 - Arduino Traffic Lights -->
+        <article class="project-card" id="project-12">
           <div>
-            <div class="project-card__num">11 / 14</div>
+            <div class="project-card__num">12 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/11-arduino-traffic.jpg" alt="Arduino traffic light controller circuit">
             </div>
@@ -337,10 +385,10 @@
           </div>
         </article>
 
-        <!-- 12 - Coffee Shop -->
-        <article class="project-card" id="project-12">
+        <!-- 13 - Coffee Shop -->
+        <article class="project-card" id="project-13">
           <div>
-            <div class="project-card__num">12 / 14</div>
+            <div class="project-card__num">13 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/12-coffee-shop.jpg" alt="Coffee shop ordering website and management app">
             </div>
@@ -361,10 +409,10 @@
           </div>
         </article>
 
-        <!-- 13 - Game Simulation -->
-        <article class="project-card" id="project-13">
+        <!-- 14 - Game Simulation -->
+        <article class="project-card" id="project-14">
           <div>
-            <div class="project-card__num">13 / 14</div>
+            <div class="project-card__num">14 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/13-game-simulation.jpg" alt="Assembly language Snake game simulation">
             </div>
@@ -383,10 +431,10 @@
           </div>
         </article>
 
-        <!-- 14 - Employee Management -->
-        <article class="project-card" id="project-14">
+        <!-- 15 - Employee Management -->
+        <article class="project-card" id="project-15">
           <div>
-            <div class="project-card__num">14 / 14</div>
+            <div class="project-card__num">15 / 15</div>
             <div class="project-card__media">
               <img src="assets/images/projects/14-employee-management.jpg" alt="Employee management system interface">
             </div>
